@@ -26,6 +26,6 @@ export class AppComponent implements OnInit {
 
   public doSomething():void {
     const y = 20
-    console.log(y)
+    console.log(y) 
   }
 }
