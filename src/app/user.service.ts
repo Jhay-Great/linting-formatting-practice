@@ -4,18 +4,21 @@ import { Injectable } from '@angular/core';
 import { IUser } from './interfaces/user.interface';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root',
 })
 export class UserService {
-  private users = [{name: 'John', age: 30}, {name: 'Jane', age: 25}];
+    private users = [
+        { name: 'John', age: 30 },
+        { name: 'Jane', age: 25 },
+    ];
 
-  constructor() { }
+    constructor() {}
 
-  getUsers() {
-    return this.users;
-  }
+    getUsers() {
+        return this.users;
+    }
 
-  addUser(user:IUser) {
-    this.users.push(user);
-  }
+    addUser(user: IUser) {
+        this.users.push(user);
+    }
 }

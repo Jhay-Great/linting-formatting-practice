@@ -1,11 +1,10 @@
 # LintingFormattingPractice
 
-
 ## NPM scripts
 
 ### Prettier
-`npm run prettier` to run prettier command for only the files in my app component
 
+`npm run prettier` to run prettier command for only the files in my app component
 
 <!-- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
