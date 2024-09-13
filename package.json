@@ -9,11 +9,10 @@
         "test": "ng test",
         "serve:ssr:linting-formatting-practice": "node dist/linting-formatting-practice/server/server.mjs",
         "ng-lint": "ng lint",
-        "prettier": "npx prettier --write ./src/app/**/*.ts",
         "check-prettier-linter-conflict": "npx eslint-config-prettier **/*.ts",
         "lint": "ng lint --fix",
-        "format": "prettier --write '**/*.{ts,js,html,css,json,md}'",
-        "lint:format": "npm run ng-lint && npm run format",
+        "prettier": "prettier --write '**/*.{ts,js,html,css,json,md}'",
+        "lint:format": "npm run ng-lint && npm run prettier",
         "prepare": "husky"
     },
     "lint-staged": {
