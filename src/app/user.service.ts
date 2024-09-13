@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 
+// local modules
+import { IUser } from './interfaces/user.interface';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +15,7 @@ export class UserService {
     return this.users;
   }
 
-  addUser(user) {
+  addUser(user:IUser) {
     this.users.push(user);
   }
 }

@@ -1,11 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 
+// local modules
+import { IUser } from '../interfaces/user.interface';
+
 @Component({
   selector: 'app-user-list',
+  standalone: true,
   template: `
     <ul>
-      <li *ngFor="let user of users">{{ user.name }} ({{ user.age }})</li>
+      @for (user of users; track $index) {
+        <li>
+          {{ user.name }} ({{ user.age }})
+        </li>
+      }
+      <!-- <li *ngFor="let user of users">{{ user.name }} ({{ user.age }})</li> -->
     </ul>
   `,
   styles: [`
@@ -14,7 +23,7 @@ import { UserService } from '../user.service';
   `]
 })
 export class UserListComponent implements OnInit {
-  users: any[];
+  users!: IUser[];
 
   constructor(private userService: UserService) {}
 
